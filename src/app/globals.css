@@ -67,3 +67,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+.horiz::-webkit-scrollbar {
+  height: 12px;
+}
+
+/* Track */
+.horiz::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+.horiz::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.horiz::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
