@@ -31,9 +31,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { useUserSession } from "../../../hooks/use-user-session";
-import { signOutWithGoogle } from "@/lib/firebase/auth";
-import { removeSession } from "@/actions/auth-actions";
 
 interface Crumbs {
   href: string;
@@ -55,11 +52,11 @@ export default function AdminLayout({
   query?: string;
   setQuery?: (query: string) => void;
 }) {
-  const userSessionId = useUserSession(session);
+  const userSessionId: string | null = null;
 
   const handleSignOut = async () => {
-    await signOutWithGoogle();
-    await removeSession();
+    // await signOutWithGoogle();
+    // await removeSession();
   };
 
   return (
